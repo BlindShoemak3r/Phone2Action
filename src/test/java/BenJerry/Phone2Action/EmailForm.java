@@ -34,7 +34,7 @@ public class EmailForm {
 	//The purpose of these test cases are to go through the email form, with negative scenarios first, concluded with a
 	//positive test to successfully submit the form
 	
-	@Test (priority = 1)
+	@Test (priority = 1)	//test only sending a title & verify all other error messages display upon submission
 	public void titleOnlyTest() {
 		driver.get("https://action.benjerry.com/lh92ba9");
 		
@@ -60,7 +60,7 @@ public class EmailForm {
 		Assert.assertTrue(emailError.isDisplayed());
 	}
 	
-	@Test (priority = 2)
+	@Test (priority = 2)	//test only sending a name & verify all other error messages display upon submission
 	public void nameOnlyTest () {
 		WebElement titles = driver.findElement(By.id("input-title"));
 		WebElement name = driver.findElement(By.name("fullName"));
@@ -86,7 +86,7 @@ public class EmailForm {
 		Assert.assertTrue(emailError.isDisplayed());
 	}
 	
-	@Test (priority = 3)
+	@Test (priority = 3)	//test only sending an address & verify all other error messages display upon submission
 	public void addressOnlyTest () throws InterruptedException {
 		WebElement name = driver.findElement(By.name("fullName"));
 		WebElement address1 = driver.findElement(By.id("input-address1"));
@@ -113,7 +113,7 @@ public class EmailForm {
 		Assert.assertTrue(emailError.isDisplayed());
 	}
 	
-	@Test (priority = 4)
+	@Test (priority = 4)	//test only sending a zip code & verify all other error messages display upon submission
 	public void zipOnlyTest() {
 		WebElement address1 = driver.findElement(By.id("input-address1"));
 		WebElement sendEmail = driver.findElement(By.xpath("//fieldset[@class='p2a-fieldset-submit']/button"));
@@ -136,7 +136,7 @@ public class EmailForm {
 		Assert.assertTrue(emailError.isDisplayed());
 	}
 	
-	@Test (priority = 5)
+	@Test (priority = 5)	//test only sending a phone number & verify all other error messages display upon submission
 	public void phoneOnlyTest() {
 		WebElement zip = driver.findElement(By.id("input-zip5"));
 		WebElement phone = driver.findElement(By.id("input-phone"));
@@ -162,7 +162,7 @@ public class EmailForm {
 		Assert.assertTrue(emailError.isDisplayed());
 	}
 	
-	@Test (priority = 6)
+	@Test (priority = 6)	//test only sending an email address & verify all other error messages display upon submission
 	public void emailOnlyTest() {
 		WebElement phone = driver.findElement(By.id("input-phone"));
 		WebElement email = driver.findElement(By.id("input-email"));
@@ -188,7 +188,7 @@ public class EmailForm {
 		Assert.assertTrue(phoneError.isDisplayed());
 	}
 	
-	@Test (priority = 7)
+	@Test (priority = 7) //test sending a completed form and verifying the campaign unavailable message is displayed
 	public void fullFormCompleteTest() throws InterruptedException {
 		driver.navigate().refresh();
 		

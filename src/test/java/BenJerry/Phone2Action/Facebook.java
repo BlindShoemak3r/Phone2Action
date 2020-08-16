@@ -35,7 +35,8 @@ public class Facebook {
 	
 	//The purpose of these test cases are to test the Facebook text link, as well as the Facebook buttons after both types
 	//of forms have been submitted
-	@Test
+	
+	@Test	//Test and verify the Facebook button after completing and email form
 	public void facebookButtonTest() throws InterruptedException {
 		driver.get("https://action.benjerry.com/lh92ba9");
 		formCompleteEmail();
@@ -55,7 +56,7 @@ public class Facebook {
 		driver.navigate().refresh();
 	}
 	
-	@Test
+	@Test	//Test and verify the Facebook link near the bottom of the page
 	public void facebookLinkTest() {
 		driver.get("https://action.benjerry.com/lh92ba9");
 		
@@ -71,7 +72,7 @@ public class Facebook {
 		driver.switchTo().window(tabs.get(0));
 	}
 	
-	@Test
+	@Test	//Test and verify the Facebook button after completing and call form
 	public void facebookPhoneButtonTest() throws InterruptedException {
 		WebElement callButton = driver.findElement(By.xpath("//li[@class='call-nav-list-item']"));
 		callButton.click();

@@ -32,7 +32,7 @@ public class FormFieldValidate {
 	
 	//The purpose of these test cases are to verify that all of the expected input fields are present
 	
-	@Test 
+	@Test	//verify all email fields are present 
 	public void validateAllEmailFieldsTest() {
 		driver.get("https://action.benjerry.com/lh92ba9");
 		
@@ -46,6 +46,10 @@ public class FormFieldValidate {
 		WebElement emailCheckBox = driver.findElement(By.id("subscribeEmail"));
 		WebElement smsCheckBox = driver.findElement(By.id("subscribeSms"));
 		
+		int expectedTitles = 62;
+		int titlesNumber = titles.findElements(By.tagName("option")).size();
+		Assert.assertEquals(titlesNumber, expectedTitles);
+		
 		Assert.assertTrue(titles.isDisplayed());
 		Assert.assertTrue(name.isDisplayed());
 		Assert.assertTrue(address1.isDisplayed());
@@ -58,7 +62,7 @@ public class FormFieldValidate {
 	}
 	
 	
-	@Test
+	@Test //verify all call fields are present
 	public void validateCallFieldsTest() throws InterruptedException {
 		driver.get("https://action.benjerry.com/lh92ba9");
 		

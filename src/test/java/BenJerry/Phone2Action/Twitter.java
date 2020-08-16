@@ -35,7 +35,8 @@ public class Twitter {
 	
 	//The purpose of these test cases are to test the Twitter text link, as well as the Twitter buttons after both types
 	//of forms have been submitted
-	@Test
+	
+	@Test	//Test and verify the Twitter button after completing and email form
 	public void twitterButtonTest() throws InterruptedException {
 		driver.get("https://action.benjerry.com/lh92ba9");
 		formCompleteEmail();
@@ -55,7 +56,7 @@ public class Twitter {
 		driver.navigate().refresh();
 	}
 	
-	@Test
+	@Test	//Test and verify the Twitter link near the bottom of the page
 	public void twitterLinkTest() {
 		WebElement twitterLink = driver.findElement(By.xpath("//span[contains(text(),'Twitter')]"));
 		twitterLink.click();
@@ -69,7 +70,7 @@ public class Twitter {
 		driver.switchTo().window(tabs.get(0));
 	}
 	
-	@Test
+	@Test	//Test and verify the Twitter button after completing and call form
 	public void twitterPhoneButtonTest() throws InterruptedException {
 		WebElement callButton = driver.findElement(By.xpath("//li[@class='call-nav-list-item']"));
 		callButton.click();

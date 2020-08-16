@@ -32,7 +32,7 @@ public class PhoneForm {
 	//The purpose of these test cases are to go through the phone call form, with negative scenarios first, concluded with a
 	//positive test to successfully submit the form
 	
-	@Test
+	@Test	//test only sending an address & verify all other error messages display upon submission
 	public void addressOnlyTest() throws InterruptedException {
 		driver.get("https://action.benjerry.com/lh92ba9");
 		WebElement callButton = driver.findElement(By.xpath("//li[@class='call-nav-list-item']"));
@@ -53,7 +53,7 @@ public class PhoneForm {
 		Assert.assertTrue(phoneError.isDisplayed());
 	}
 	
-	@Test
+	@Test	//test only sending a zip code & verify all other error messages display upon submission
 	public void zipOnlyTest() {
 		WebElement address = driver.findElement(By.xpath("//*[@id='input-address1']"));
 		WebElement zip = driver.findElement(By.id("input-zip5"));
@@ -70,7 +70,7 @@ public class PhoneForm {
 		Assert.assertTrue(phoneError.isDisplayed());
 	}
 	
-	@Test (priority = 3)
+	@Test (priority = 3)	//test only sending a title & verify all other error messages display upon submission
 	public void phoneOnlyTest() {
 		WebElement zip = driver.findElement(By.id("input-zip5"));
 		WebElement phone = driver.findElement(By.id("input-phone"));
@@ -89,7 +89,7 @@ public class PhoneForm {
 		Assert.assertTrue(zipError.isDisplayed());
 	}
 	
-	@Test (priority = 4)
+	@Test (priority = 4) //test sending a completed form and verifying the campaign unavailable message is displayed
 	public void completeFormTest() throws InterruptedException {
 		WebElement address = driver.findElement(By.xpath("//*[@id='input-address1']"));
 		WebElement zip = driver.findElement(By.id("input-zip5"));
