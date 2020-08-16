@@ -25,6 +25,8 @@ Simply clone this repository and import it into your IDE of choice. Navigate to 
 
 ## Running the tests
 
+[Video demo of the tests can be found here](https://drive.google.com/file/d/1kLLF9uvMtG0FR7uMyv7Cphg2Wqzhgw_Q/view?usp=sharing)
+
 I suggest running the tests in one at time as I encountered some issues running them in parallel. The tests can be run in any order, but I suggest starting with Form Field Validate. 
 
 To run the tests, right click within the text editor window -> Run As -> TestNG Test
