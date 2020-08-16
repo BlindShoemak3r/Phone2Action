@@ -31,6 +31,9 @@ public class EmailForm {
 		wait = new WebDriverWait (driver, 10);
 	}
 	
+	//The purpose of these test cases are to go through the email form, with negative scenarios first, concluded with a
+	//positive test to successfully submit the form
+	
 	@Test (priority = 1)
 	public void titleOnlyTest() {
 		driver.get("https://action.benjerry.com/lh92ba9");

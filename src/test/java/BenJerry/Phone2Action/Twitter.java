@@ -33,6 +33,8 @@ public class Twitter {
 		wait = new WebDriverWait (driver, 10);
 	}
 	
+	//The purpose of these test cases are to test the Twitter text link, as well as the Twitter buttons after both types
+	//of forms have been submitted
 	@Test
 	public void twitterButtonTest() throws InterruptedException {
 		driver.get("https://action.benjerry.com/lh92ba9");

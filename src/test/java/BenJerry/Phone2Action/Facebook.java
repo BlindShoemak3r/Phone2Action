@@ -33,6 +33,8 @@ public class Facebook {
 		wait = new WebDriverWait (driver, 10);
 	}
 	
+	//The purpose of these test cases are to test the Facebook text link, as well as the Facebook buttons after both types
+	//of forms have been submitted
 	@Test
 	public void facebookButtonTest() throws InterruptedException {
 		driver.get("https://action.benjerry.com/lh92ba9");

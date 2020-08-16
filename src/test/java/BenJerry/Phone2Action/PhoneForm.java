@@ -29,6 +29,9 @@ public class PhoneForm {
 		wait = new WebDriverWait (driver, 10);
 	}
 	
+	//The purpose of these test cases are to go through the phone call form, with negative scenarios first, concluded with a
+	//positive test to successfully submit the form
+	
 	@Test
 	public void addressOnlyTest() throws InterruptedException {
 		driver.get("https://action.benjerry.com/lh92ba9");

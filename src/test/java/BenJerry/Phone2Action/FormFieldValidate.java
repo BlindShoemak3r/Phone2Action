@@ -30,6 +30,8 @@ public class FormFieldValidate {
 		System.out.println(System.getProperty("user.dir"));
 	}
 	
+	//The purpose of these test cases are to verify that all of the expected input fields are present
+	
 	@Test 
 	public void validateAllEmailFieldsTest() {
 		driver.get("https://action.benjerry.com/lh92ba9");
