@@ -11,11 +11,11 @@ These instructions will get you a copy of the project up and running on your loc
 What things you need in order to execute these tests
 
 * An IDE (I used Eclipse)
-* Google Chrome (preferably v84)
-  * The chromedriver included with my project is only good for Chrome v84. If your version of Chrome is different, you can get additional chromedivers from the links provided below. Simply download the new driver (without renaming it) and replace the one included with my project.
+* Google Chrome (preferably v86)
+  * The chromedriver included with my project is only good for Chrome v86. If your version of Chrome is different, you can get additional chromedivers from the links provided below. Simply download the new driver (without renaming it) and replace the one included with my project.
   * Other chromedriver versions can be found [here](https://chromedriver.chromium.org/downloads)
-  * [Chrome v83 driver](https://chromedriver.storage.googleapis.com/index.html?path=83.0.4103.39/)
   * [Chrome v85 driver](https://chromedriver.storage.googleapis.com/index.html?path=85.0.4183.38/)
+  * [Chrome v87 driver](https://chromedriver.storage.googleapis.com/index.html?path=87.0.4280.20/)
 
 ### Installation
 
